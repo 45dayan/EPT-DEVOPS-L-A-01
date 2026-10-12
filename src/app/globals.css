@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit), "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: var(--font-fraunces), "Iowan Old Style", Palatino, serif;
+  --color-paper: #f3ecdf;
+  --color-paper-2: #e6d9c4;
+  --color-ink: #1c1915;
+  --color-ink-soft: #5e564c;
+  --color-line: #d8cbb6;
+  --color-copper: #9a4e2c;
+  --color-saffron: #c56a22;
+  --color-moss: #2f5d45;
+  --color-sea: #23445f;
+  --color-card: #fffaf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif), "Iowan Old Style", Palatino, serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(900px 480px at 8% -10%, rgba(197, 106, 34, 0.16), transparent 55%),
+    radial-gradient(800px 420px at 100% 0%, rgba(47, 93, 69, 0.12), transparent 50%),
+    var(--color-paper);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: #e7c3a4;
+  color: #1c1915;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  padding: 0.16rem 0.55rem 0.12rem;
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.stamp-new {
+  color: var(--color-saffron);
+  background: rgba(197, 106, 34, 0.08);
+}
+
+.stamp-reviewing {
+  color: var(--color-sea);
+  background: rgba(35, 68, 95, 0.08);
+}
+
+.stamp-booked {
+  color: var(--color-moss);
+  background: rgba(47, 93, 69, 0.1);
+}
+
+.stamp-archived {
+  color: var(--color-ink-soft);
+  background: rgba(94, 86, 76, 0.08);
+}
+
+.ledger-row {
+  background-image: linear-gradient(to bottom, transparent 31px, rgba(216, 203, 182, 0.7) 32px);
+  background-size: 100% 32px;
+}
